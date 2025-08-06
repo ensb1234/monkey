@@ -10,8 +10,8 @@
 // @grant        unsafeWindow
 // @grant        GM_getValue
 // @grant        GM_setValue
-// @updateURL    https://raw.githubusercontent.com/用户名/仓库名/分支名/脚本名.user.js
-// @downloadURL  https://raw.githubusercontent.com/用户名/仓库名/分支名/脚本名.user.js
+// @updateURL    https://raw.githubusercontent.com/ensb1234/monkey/main/stljs.user.js
+// @downloadURL  https://raw.githubusercontent.com/ensb1234/monkey/main/stljs.user.js
 // ==/UserScript==
 
 (function () {
@@ -265,5 +265,6 @@
 		}, 3000);
 		you.init();
 	}, 3000);
+
 
 })();
