@@ -10,8 +10,8 @@
 // @grant        unsafeWindow
 // @grant        GM_getValue
 // @grant        GM_setValue
-// @updateURL    https://raw.githubusercontent.com/ensb1234/monkey/main/stljs.user.js
-// @downloadURL  https://raw.githubusercontent.com/ensb1234/monkey/main/stljs.user.js
+// @updateURL    https://raw.githubusercontent.com/ensb1234/monkey/blob/main/stljs.user.js
+// @downloadURL  https://raw.githubusercontent.com/ensb1234/monkey/blob/main/stljs.user.js
 // ==/UserScript==
 
 (function () {
@@ -268,5 +268,6 @@
 
 
 })();
+
 
 
