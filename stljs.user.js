@@ -72,7 +72,7 @@
 		//总窗口log
 		you.totalLog = function () {
 			let message = you.getMessage();
-			console.log(message);
+			console.log(you.getStatus() + '，' + message);
 			if (message != '没事发生！') {
 				you.setMessage('没事发生！');
 			}
@@ -181,7 +181,7 @@
 			if (window.location.href.indexOf('train2') > -1) {
 				if (window.location.href.indexOf('myStudy') > -1) {
 					you.findNewStudy();
-				} else if (window.location.href.indexOf('workspace') > -1) {
+				} else if (window.location.href.indexOf('course') > -1) {
 					you.log('课程开始了，请准备好医疗箱、炸药包');
 					you.findNewCourse();
 				}
@@ -189,8 +189,13 @@
 		}
 
 		you.interval = setInterval(function () {
-			if (document.querySelector('.vcp-timelabel')) {
+			if (window.location.href.indexOf('grain') > -1) {
 				//视频播放页
+				if(!document.querySelector('.vcp-timelabel')){
+					//竟然没在看视频？
+					you.findNewVideo();
+					return;
+				}
 				you.newTime = document.querySelector('.vcp-timelabel').innerText;
 				if (document.querySelector('.ended-mask').style.display != 'none') {
 					//视频结束画面
@@ -244,7 +249,7 @@
 						location.reload();
 					}
 					you.totalLog();
-				} else if (window.location.href.indexOf('workspace') > -1) {
+				} else if (window.location.href.indexOf('course') > -1) {
 					//课程列表页
 					if (you.sq('.score').innerText == you.sq('.total-score').innerText.slice(0, -1)) {
 						//满分了
@@ -265,9 +270,8 @@
 		}, 3000);
 		you.init();
 	}, 3000);
-
-
 })();
+
 
 
 
